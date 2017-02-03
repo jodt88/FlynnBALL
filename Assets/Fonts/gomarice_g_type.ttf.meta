@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d336fcae59488f0418b566017e4aa7fd
+timeCreated: 1486088917
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: G-Type
+  fontNames:
+  - G-Type
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
