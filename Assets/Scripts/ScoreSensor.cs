@@ -1,27 +1,23 @@
 ﻿using System.Collections;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreSensor : MonoBehaviour
 {
-    private int score = 0;
-
-    public GameObject scoreText;
+    public TextMesh scoreText;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.name == "ball")
         {
-            score = score + 100;
+            TotalScore.score += 100;
         }
         else
         {
-            score = score - 100;
+            TotalScore.score -= 100;
         }
+        scoreText = GameObject.Find("Score Counter").GetComponent<TextMesh>();
+        scoreText.GetComponent<TextMesh>().text = "Score: " + TotalScore.score;
     }
-
-    void Update()
-    {
-        scoreText.GetComponent<TextMesh>().text = "Score: " + score;
-    } 
 }
