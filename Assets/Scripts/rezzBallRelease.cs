@@ -4,25 +4,21 @@ using UnityEngine;
 
 public class rezzBallRelease : MonoBehaviour
 {
-    HingeJoint2D[] hingeJoints;
-    JointMotor2D jointMotor;
+    public HingeJoint2D[] hingeJoints;
+    public JointMotor2D jointMotor;
 
     void Start()
     {
-        hingeJoints = gameObject.GetComponents<HingeJoint2D>();
+        hingeJoints = GameObject.Find("new flipper left (1)").GetComponents<HingeJoint2D>();
         jointMotor = hingeJoints[0].motor;
     }
 
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (other.gameObject.name == "ball")
         {
             jointMotor.motorSpeed = 3000;
+            hingeJoints[0].motor = jointMotor;
         }
-        else
-        {
-            jointMotor.motorSpeed = 0;
-        }
-        hingeJoints[0].motor = jointMotor;
     }
 }
