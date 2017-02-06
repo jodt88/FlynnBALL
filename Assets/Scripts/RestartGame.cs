@@ -10,6 +10,7 @@ public class RestartGame : MonoBehaviour {
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             TotalScore.score = 0;
+            TotalScore.ballCount = 3;
         }
 	}
 }
