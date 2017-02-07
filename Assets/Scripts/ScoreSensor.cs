@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/* ScoreSensor.cs -- A script for increasing or decreasing the player's score by 50. Displays score on start and update.
+ * 
+ * Written by Jody Toms.
+ */
+
+using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +20,7 @@ public class ScoreSensor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.name == "ball")
+        if (other.gameObject.name == "ball")
         {
             TotalScore.score += 50;
         }

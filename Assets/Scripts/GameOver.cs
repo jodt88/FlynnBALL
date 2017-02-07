@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* GameOver.cs -- A script for detecting that the hero pinball went through the hole. Displays the number of pinballs left, 
+ * as well as the overall highscore. Resets the board while pinballs remain. Displays game over prompt when pinballs run out.
+ * Also stores the highscore if a new one exists.
+ * 
+ * Written by Jody Toms.
+ */
+
+using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,10 +42,9 @@ public class GameOver : MonoBehaviour
                 endText.transform.localScale = new Vector3(1, 1, 1);
                 DestroyObject(GameObject.Find("rezzBall"));
                 DestroyObject(other.gameObject);
-                if (TotalScore.highScore < TotalScore.score)
+                if (PlayerPrefs.GetInt("HighScore") < TotalScore.score)
                 {
-                    TotalScore.highScore = TotalScore.score;
-                    PlayerPrefs.SetInt("HighScore", TotalScore.highScore);
+                    PlayerPrefs.SetInt("HighScore", TotalScore.score);
                 }
             }
         }

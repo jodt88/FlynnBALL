@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/* BallSlower.cs -- A script for decreasing the velocity of an object.
+ * 
+ * Written by Jody Toms.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

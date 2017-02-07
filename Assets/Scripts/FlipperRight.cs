@@ -1,7 +1,8 @@
-﻿/* Original Script HingeFlicker.cs by Gregory Yoes-Favrot.
- * Edited for use in FlynnBALL by Jody Toms 
+﻿/* FlipperRight.cs -- A script for the right flipper.
+ 
+/* Original Script HingeFlicker.cs by Gregory Yoes-Favrot.
+ * Edited for use in FlynnBALL by Jody Toms.
  */
-
 
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using UnityEngine;
 public class FlipperRight : MonoBehaviour
 {
     HingeJoint2D hingeJoint1;
+
     JointMotor2D jointMotor;
 
     void Start()
@@ -36,6 +38,5 @@ public class FlipperRight : MonoBehaviour
             hingeJoint1.motor = jointMotor;
         }
         hingeJoint1.motor = jointMotor;
-
     }
 }

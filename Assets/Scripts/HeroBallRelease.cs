@@ -1,10 +1,16 @@
-﻿using System.Collections;
+﻿/* HeroBallRelease.cs -- A script for releasing the player's pinball.
+ * 
+ * Written by Jody Toms.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HeroBallRelease : MonoBehaviour
 {
     HingeJoint2D[] hingeJoints;
+
     JointMotor2D jointMotor;
 
     void Start()

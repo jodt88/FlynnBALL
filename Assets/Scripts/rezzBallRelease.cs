@@ -1,10 +1,16 @@
-﻿using System.Collections;
+﻿/* rezzBallRelease.cs -- A script for releasing the antagonist Rezz-Ball pinball.
+ * 
+ * Written by Jody Toms.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class rezzBallRelease : MonoBehaviour
 {
     public HingeJoint2D[] hingeJoints;
+
     public JointMotor2D jointMotor;
 
     void Start()

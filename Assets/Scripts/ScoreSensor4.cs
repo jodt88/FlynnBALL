@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/* ScoreSensor.cs -- A script for increasing or decreasing the player's score by 100. Displays score on start and update.
+ * 
+ * Written by Jody Toms.
+ */
+
+using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
